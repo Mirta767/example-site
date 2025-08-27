@@ -1,0 +1,252 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Domine:wght@400..700&family=Forum&family=Italianno&family=Monsieur+La+Doulaise&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Parisienne&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+    height: 100%;
+  margin: 0;
+  background-color: #ede8e2;
+
+  color: #333333;
+}
+
+
+
+
+/* Header navigation */
+.content-width {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 25px;
+   position: relative;
+}
+
+.page-header {
+  display: grid;
+  grid-template-columns: minmax(auto, 1600px);
+    justify-content: center;
+}
+
+.logo {
+  padding-left: 0;
+}
+
+.podlogo{
+  font-family: "Open Sans", sans-serif;
+  font-size: small;
+  margin-top: 3px;
+}
+
+.site-nav {
+  display: flex;
+  justify-content: flex-end;
+  font-family: "Open Sans", sans-serif;
+  font-size: small;
+}
+
+.site-nav ul {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.site-nav li a {
+  text-decoration: none;
+  color: inherit;
+  font-weight: 500;
+}
+
+a:hover {
+  color: #ceb3a4 !important;
+}
+
+/* Hide the checkbox */
+.menu-toggle {
+  display: none;
+}
+
+.hamburger {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+  color: #333;
+  z-index: 10;
+  position: relative;
+  
+}
+
+/* Responsive navigation */
+@media (max-width: 500px) {
+  .site-nav {
+    display: none;
+    flex-direction: column;
+    background-color: #ede8e2;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 100%;
+    padding: 20px;
+     z-index: 20;  
+  }
+
+  .site-nav ul {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .menu-toggle:checked + .hamburger + .site-nav {
+    display: flex;
+  }
+}
+
+hr {
+  height: 1px;
+  border: none;
+  background-color: #b6a0a0;
+} 
+
+
+/* O MENI */
+
+.naslov {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.omeni {
+  display: flex;
+  max-width: 1600px;
+  margin: 0 auto;
+  gap: 30px;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.slika {
+  flex: 0 0 50%; 
+}
+
+.slika img {
+  width: 75%;    
+  height: auto;
+  display: block;
+  margin-left: auto; 
+}
+
+.tekst {
+  flex: 0 0 30%; 
+}
+
+.tekst p {
+  line-height: 1.6;
+   font-family: "Open Sans", sans-serif
+}
+
+.gumb {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #5f6972;
+  font-family: "Open Sans", sans-serif;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+
+
+.gumb:hover {
+  background-color: #010f1f;
+}
+
+
+.sekcija-boja {
+  background-image: url('./../media/pijesak_canva.png');
+  background-repeat: no-repeat;
+  background-size: cover;      
+  background-position: center; 
+  padding: 40px 20px;
+    border-radius: 20px 20px 0 0;
+    margin-bottom: -7px;
+    margin-top: -7px;
+}
+
+
+@media (max-width: 768px) {
+  .omeni {
+    flex-direction: column;
+    text-align: left;
+  }
+
+  .slika img {
+  width: 100%;    
+  height: auto;
+  display: block;
+  margin-left: 0; 
+}
+
+  .tekst {
+    flex: 0 0 100%;
+  }
+
+  .gumb {
+    width: auto; 
+  }
+}
+
+@media (max-width: 1100px) {
+  .omeni {
+    flex-direction: column;
+    text-align: left;
+  }
+
+  .slika img {
+  width: 100%;    
+  height: auto;
+  display: block;
+  margin-left: 0; 
+}
+
+  .tekst {
+    flex: 0 0 100%;
+  }
+
+  .gumb {
+    width: auto; 
+  }
+}
+
+/* Footer */
+footer {
+  background-color: #242222;
+  color: rgb(238, 233, 233);
+  width: 100%;       
+  padding: 20px 0;
+
+}
+
+.footer-content {
+  max-width: 1600px;   
+  margin: 0 auto;      
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+  text-align: center;
+}
+
+footer p {
+  margin: 0;
+}
+

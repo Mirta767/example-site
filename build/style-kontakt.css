@@ -1,0 +1,203 @@
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+    background-color: #ede8e2;
+}
+
+h2 {
+     font-family: "Open Sans", sans-serif;
+     font-size: large;
+     margin-left: 50px;
+    
+}
+
+/* Header navigation */
+.content-width {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 25px;
+   position: relative;
+}
+
+.page-header {
+  display: grid;
+  grid-template-columns: minmax(auto, 1600px);
+    justify-content: center;
+    background-color: white;
+}
+
+.logo {
+  padding-left: 0;
+}
+
+.podlogo{
+  font-family: "Open Sans", sans-serif;
+  font-size: small;
+  margin-top: 3px;
+}
+
+.site-nav {
+  display: flex;
+  justify-content: flex-end;
+  font-family: "Open Sans", sans-serif;
+  font-size: small;
+}
+
+.site-nav ul {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.site-nav li a {
+  text-decoration: none;
+  color: inherit;
+  font-weight: 500;
+}
+
+a:hover {
+  color: #ceb3a4 !important;
+}
+
+/* Hide the checkbox */
+.menu-toggle {
+  display: none;
+}
+
+.hamburger {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+  color: #333;
+  z-index: 10;
+  position: relative;
+  
+}
+
+/* Responsive navigation */
+@media (max-width: 500px) {
+  .site-nav {
+    display: none;
+    flex-direction: column;
+    background-color: #ede8e2;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 100%;
+    padding: 20px;
+     z-index: 20;  
+  }
+
+  .site-nav ul {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .menu-toggle:checked + .hamburger + .site-nav {
+    display: flex;
+  }
+}
+
+hr {
+  height: 1px;
+  border: none;
+  background-color: #757272;
+  z-index: 100;
+} 
+
+main {
+  flex: 1; 
+}
+
+/* Kontakt sekcija - desktop */
+
+
+.kontakt-container {
+  display: flex;
+  max-width: 1600px;
+  margin: 0 auto;
+  gap: 30px;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.introL-kontakt {
+  flex: 1;
+}
+
+.introL-kontakt h2 {
+  font-size: 30px;
+  color: #383333;
+  font-weight: lighter;
+  line-height: 1.5;
+text-align: center;
+}
+
+@media (max-width: 768px) {
+  .introL-kontakt h2 {
+  font-size: 20px;
+  text-align: center;
+  margin-left: 0;
+  margin-top: 30px;
+  }
+}
+
+
+.mapa {
+  flex: 1;
+}
+
+.mapa iframe {
+  width: 100%;
+  height: 450px;
+  border: none;
+  border-radius: 20px;
+  
+}
+
+/* Mobilna verzija */
+@media (max-width: 768px) {
+  .kontakt-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .mapa iframe {
+    height: 300px;
+  }
+}
+
+/* Footer */
+footer {
+  background-color: #242222;
+  color: rgb(238, 233, 233);
+  width: 100%;
+  padding: 20px 0;
+}
+
+.footer-content {
+  max-width: 1600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+  text-align: center;
+}
+
+footer p {
+  margin: 0;
+}
